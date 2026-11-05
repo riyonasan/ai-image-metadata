@@ -8,8 +8,8 @@ Eagleの右サイドバーで、AI画像のプロンプトや生成設定を確�
 
 Eagle 4のプラグイン開発メニューから、このフォルダを開発用プラグインとして読み込みます。PNGを1枚選び、右側の **AI Image Metadata** を開きます。インストール済みの他プラグインを置き換える必要はありません。
 
-- ポジティブ／ネガティブは枠付きで表示し、長文を折りたためます。コピーボタンは表示の省略にかかわらず全文をコピーします。
-- LoRAの「タグをコピー」は、`<lora:styles\example.safetensors:0.8>` のようにパス・ファイル名・重みを含みます。同じLoRA配置を使う環境で貼り付けることを想定しています。
+- ポジティブ／ネガティブは枠付きで表示し、長文を折りたためます。全文が3行に収まる場合は展開ボタンを出しません。コピーアイコンは表示の省略にかかわらず全文をコピーします。
+- LoRAは`example:0.8`のように拡張子を省いて表示します。右のコピーアイコンは`<lora:styles\example.safetensors:0.8>`のようにパス・ファイル名・重みを含むタグ全体をコピーします。同じLoRA配置を使う環境で貼り付けることを想定しています。
 - モデル名、記録がある場合のハッシュ、生成設定の各値をコピーできます。LoRAと生成設定は個別に開閉できます。
 - 欄全体の開閉にはEagle標準のインスペクター見出しを使います。
 - 選択画像の内容に切り替わらない場合は「再読み込み」を押してください。
@@ -40,6 +40,6 @@ Gitの既定ブランチは`main`です。Notion連携は使いません。技�
 
 ## ライセンスと由来
 
-[MIT](LICENSE)。既存のStable Diffusion Metadataや参考ユーザースクリプトのコード・アイコンは同梱していません。Eagleの公開APIとPNG形式に基づく新規実装です。
+自作コードは[MIT](LICENSE)。コピーアイコンはFont Awesome FreeのCC BY 4.0ライセンスで同梱しています。出典と条件は[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)を参照してください。既存のStable Diffusion Metadataや参考ユーザースクリプトのコード・アイコンは同梱していません。Eagleの公開APIとPNG形式に基づく新規実装です。
 
 仕様の参照先：[Eagle Inspector API](https://developer.eagle.cool/plugin-api/get-started/plugin-types/inspector)、[Clipboard API](https://developer.eagle.cool/plugin-api/api/clipboard)、[PNG仕様](https://www.w3.org/TR/png-3/)。

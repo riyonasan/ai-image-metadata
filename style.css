@@ -6,6 +6,11 @@ body { margin: 0; padding: 8px; overflow-wrap: anywhere; }
 button, select { font: inherit; color: inherit; background: var(--button); border: 1px solid var(--line); border-radius: 4px; }
 button { cursor: pointer; padding: 2px 7px; min-height: 25px; flex-shrink: 0; }
 button:hover { border-color: var(--accent); }
+.copy-button { display: inline-flex; align-items: center; justify-content: center; width: 27px; height: 26px; padding: 5px 6px; border: 0; background: transparent; }
+.copy-button img { width: 14px; height: 16px; filter: invert(1); opacity: .9; }
+:root[data-theme="light"] .copy-button img { filter: none; }
+.copy-button:hover { color: var(--accent); }
+.copy-button:hover img { opacity: 1; }
 button:disabled { cursor: default; opacity: .65; }
 button:focus-visible, summary:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 ::selection { color: var(--panel); background: var(--accent); }
@@ -18,12 +23,11 @@ pre.clamped { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-c
 .value-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px; margin: 5px 0; }
 .value { min-width: 0; white-space: pre-wrap; }
 .muted, .message, .note { color: var(--muted); }
-.hash, .weight { font-size: 11px; color: var(--muted); }
+.hash { font-size: 11px; color: var(--muted); }
 details { border-top: 1px solid var(--line); padding: 7px 0; }
 summary { cursor: pointer; user-select: none; }
 .lora { padding: 5px 0; }
 .lora + .lora { border-top: 1px solid var(--line); }
-.tag { display: block; color: var(--muted); font-size: 10px; white-space: pre-wrap; }
 dl { margin: 5px 0; }
 .setting { display: grid; grid-template-columns: minmax(60px, .7fr) minmax(0, 1fr); gap: 6px; align-items: start; margin: 4px 0; }
 dt { color: var(--muted); }
