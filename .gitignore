@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+work/
+local-data/
+private-data/
+outputs/
+*.local.*
+*.log
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+.DS_Store
+Thumbs.db

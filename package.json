@@ -1,0 +1,12 @@
+{
+  "name": "eagle-ai-image-metadata",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A local Eagle inspector for copying AI image generation metadata",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/png.js && node --check src/metadata.js && node --check src/inspector.js",
+    "inspect": "node scripts/inspect.js"
+  }
+}
